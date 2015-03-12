@@ -1,4 +1,6 @@
-package GUI;
+package GUII;
+
+import GUI.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -150,6 +152,8 @@ public class Telaprincipal extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Telaprincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
