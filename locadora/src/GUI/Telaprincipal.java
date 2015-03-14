@@ -1,4 +1,4 @@
-package GUII;
+package GUI;
 
 import GUI.*;
 
