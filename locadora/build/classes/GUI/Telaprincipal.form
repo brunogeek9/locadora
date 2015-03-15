@@ -8,6 +8,15 @@
         <Property name="text" type="java.lang.String" value="jCheckBoxMenuItem1"/>
       </Properties>
     </Component>
+    <Container class="javax.swing.JMenu" name="jMenu4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jMenu4"/>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="gerenciar">
@@ -15,6 +24,11 @@
             <Property name="text" type="java.lang.String" value="Gerenciar"/>
           </Properties>
           <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Emprestimo"/>
+              </Properties>
+            </MenuItem>
             <Menu class="javax.swing.JMenu" name="jMenu1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Filme"/>
@@ -22,7 +36,7 @@
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuCadastroFilme">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Cadastrar"/>
+                    <Property name="text" type="java.lang.String" value="Cadastrar/Excluir"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuCadastroFilmeActionPerformed"/>
@@ -31,11 +45,6 @@
                 <MenuItem class="javax.swing.JMenuItem" name="Usurario">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Listar"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Excluir"/>
                   </Properties>
                 </MenuItem>
               </SubComponents>
@@ -47,7 +56,7 @@
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuCadastroUsuario">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Cadastrar"/>
+                    <Property name="text" type="java.lang.String" value="Cadastrar/Excluir"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuCadastroUsuarioActionPerformed"/>
@@ -56,11 +65,6 @@
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Listar"/>
-                  </Properties>
-                </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Excluir"/>
                   </Properties>
                 </MenuItem>
               </SubComponents>
@@ -72,10 +76,13 @@
             <Property name="text" type="java.lang.String" value="Sobre"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuDevelopers">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Criadores"/>
+                <Property name="text" type="java.lang.String" value="Desenvovido por"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuDevelopersActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -125,11 +132,13 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JDesktopPane" name="jDesktopPane">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="c8" type="rgb"/>
+        </Property>
+      </Properties>
 
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-        <Property name="columns" type="int" value="0"/>
-        <Property name="rows" type="int" value="1"/>
-      </Layout>
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
     </Container>
   </SubComponents>
 </Form>

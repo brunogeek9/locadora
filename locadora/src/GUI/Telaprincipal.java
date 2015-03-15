@@ -31,33 +31,39 @@ public class Telaprincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jMenu4 = new javax.swing.JMenu();
         jDesktopPane = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         gerenciar = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenuCadastroFilme = new javax.swing.JMenuItem();
         Usurario = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuCadastroUsuario = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuDevelopers = new javax.swing.JMenuItem();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
 
+        jMenu4.setText("jMenu4");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Locadora");
 
-        jDesktopPane.setLayout(new java.awt.GridLayout());
+        jDesktopPane.setBackground(new java.awt.Color(200, 255, 255));
+        jDesktopPane.setLayout(new java.awt.CardLayout());
 
         gerenciar.setText("Gerenciar");
 
+        jMenuItem1.setText("Emprestimo");
+        gerenciar.add(jMenuItem1);
+
         jMenu1.setText("Filme");
 
-        jMenuCadastroFilme.setText("Cadastrar");
+        jMenuCadastroFilme.setText("Cadastrar/Excluir");
         jMenuCadastroFilme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuCadastroFilmeActionPerformed(evt);
@@ -68,14 +74,11 @@ public class Telaprincipal extends javax.swing.JFrame {
         Usurario.setText("Listar");
         jMenu1.add(Usurario);
 
-        jMenuItem1.setText("Excluir");
-        jMenu1.add(jMenuItem1);
-
         gerenciar.add(jMenu1);
 
         jMenu3.setText("Usuario");
 
-        jMenuCadastroUsuario.setText("Cadastrar");
+        jMenuCadastroUsuario.setText("Cadastrar/Excluir");
         jMenuCadastroUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuCadastroUsuarioActionPerformed(evt);
@@ -86,17 +89,19 @@ public class Telaprincipal extends javax.swing.JFrame {
         jMenuItem4.setText("Listar");
         jMenu3.add(jMenuItem4);
 
-        jMenuItem5.setText("Excluir");
-        jMenu3.add(jMenuItem5);
-
         gerenciar.add(jMenu3);
 
         jMenuBar1.add(gerenciar);
 
         jMenu2.setText("Sobre");
 
-        jMenuItem2.setText("Criadores");
-        jMenu2.add(jMenuItem2);
+        jMenuDevelopers.setText("Desenvovido por");
+        jMenuDevelopers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuDevelopersActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuDevelopers);
 
         jMenuBar1.add(jMenu2);
 
@@ -135,6 +140,13 @@ public class Telaprincipal extends javax.swing.JFrame {
         a.setVisible(true);
         a.setBounds(50,50,200,200);
     }//GEN-LAST:event_jMenuCadastroUsuarioActionPerformed
+
+    private void jMenuDevelopersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDevelopersActionPerformed
+        Sobre a = new Sobre();
+        jDesktopPane.add(a);
+        a.setVisible(true);
+        a.setBounds(50,50,200,200);
+    }//GEN-LAST:event_jMenuDevelopersActionPerformed
 
     /**
      * @param args the command line arguments
@@ -182,12 +194,12 @@ public class Telaprincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuCadastroFilme;
     private javax.swing.JMenuItem jMenuCadastroUsuario;
+    private javax.swing.JMenuItem jMenuDevelopers;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     // End of variables declaration//GEN-END:variables
 }
