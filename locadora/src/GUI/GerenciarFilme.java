@@ -9,12 +9,12 @@ package GUI;
  *
  * @author jamelle
  */
-public class CadastroFilme extends javax.swing.JInternalFrame {
+public class GerenciarFilme extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form CadastroFilme
      */
-    public CadastroFilme() {
+    public GerenciarFilme() {
         initComponents();
     }
 
