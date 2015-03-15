@@ -31,16 +31,19 @@ public class Telaprincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
-        caixabuscar = new javax.swing.JTextField();
-        Buscar = new javax.swing.JButton();
-        nomelocadora = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jDesktopPane = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         gerenciar = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
         produto = new javax.swing.JMenuItem();
         Usurario = new javax.swing.JMenuItem();
-        Sobre = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -48,39 +51,49 @@ public class Telaprincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Locadora");
 
-        Buscar.setText("Buscar");
-        Buscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BuscarActionPerformed(evt);
-            }
-        });
-
-        nomelocadora.setFont(new java.awt.Font("Sitka Text", 1, 48)); // NOI18N
-        nomelocadora.setText("Locadora");
-
-        jLabel1.setText("Pesquisar cliente:");
+        jDesktopPane.setLayout(new java.awt.GridLayout());
 
         gerenciar.setText("Gerenciar");
 
-        produto.setText("Produto");
-        gerenciar.add(produto);
+        jMenu1.setText("Filme");
 
-        Usurario.setText("Usuário");
-        gerenciar.add(Usurario);
+        produto.setText("Cadastrar");
+        produto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                produtoActionPerformed(evt);
+            }
+        });
+        jMenu1.add(produto);
+
+        Usurario.setText("Listar");
+        jMenu1.add(Usurario);
+
+        jMenuItem1.setText("Excluir");
+        jMenu1.add(jMenuItem1);
+
+        gerenciar.add(jMenu1);
+
+        jMenu3.setText("Usuario");
+
+        jMenuItem3.setText("Cadastrar");
+        jMenu3.add(jMenuItem3);
+
+        jMenuItem4.setText("Listar");
+        jMenu3.add(jMenuItem4);
+
+        jMenuItem5.setText("Excluir");
+        jMenu3.add(jMenuItem5);
+
+        gerenciar.add(jMenu3);
 
         jMenuBar1.add(gerenciar);
 
-        Sobre.setText("Sobre");
+        jMenu2.setText("Sobre");
 
-        jMenuItem3.setText("Criadores");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        Sobre.add(jMenuItem3);
+        jMenuItem2.setText("Criadores");
+        jMenu2.add(jMenuItem2);
 
-        jMenuBar1.add(Sobre);
+        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -88,44 +101,28 @@ public class Telaprincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(nomelocadora)
-                .addGap(105, 105, 105))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(caixabuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Buscar)
-                .addContainerGap(67, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(nomelocadora)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Buscar)
-                    .addComponent(caixabuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addContainerGap(179, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jDesktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                .addContainerGap())
         );
-
-        nomelocadora.getAccessibleContext().setAccessibleName("LogoLocadora");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BuscarActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    private void produtoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_produtoActionPerformed
+        CadastroFilme a = new CadastroFilme();
+        jDesktopPane.add(a);
+        a.setVisible(true);
+        a.setBounds(50,50,200,200);
+    }//GEN-LAST:event_produtoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,16 +163,19 @@ public class Telaprincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Buscar;
-    private javax.swing.JMenu Sobre;
     private javax.swing.JMenuItem Usurario;
-    private javax.swing.JTextField caixabuscar;
     private javax.swing.JMenu gerenciar;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JDesktopPane jDesktopPane;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JLabel nomelocadora;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem produto;
     // End of variables declaration//GEN-END:variables
 }
