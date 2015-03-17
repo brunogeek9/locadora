@@ -33,6 +33,7 @@ public class Telaprincipal extends javax.swing.JFrame {
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jDesktopPane = new javax.swing.JDesktopPane();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         gerenciar = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -55,6 +56,12 @@ public class Telaprincipal extends javax.swing.JFrame {
 
         jDesktopPane.setBackground(new java.awt.Color(200, 255, 255));
         jDesktopPane.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/20528-rick-grimes-the-waking-dead-1920x1200-game-wallpaper.jpg"))); // NOI18N
+        jLabel1.setText("Locadora Beta");
+        jLabel1.setBorder(new javax.swing.border.MatteBorder(null));
+        jDesktopPane.add(jLabel1, "card2");
 
         gerenciar.setText("Gerenciar");
 
@@ -191,6 +198,7 @@ public class Telaprincipal extends javax.swing.JFrame {
     private javax.swing.JMenu gerenciar;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JDesktopPane jDesktopPane;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
