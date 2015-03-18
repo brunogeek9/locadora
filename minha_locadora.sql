@@ -25,10 +25,10 @@ create table funcionario(
 	endereco varchar(40) not null
 );
 create table filme(
-	idFilme int not null auto_increment ,
-	idGenero int not null,
+	idFilme int auto_increment ,
+	idGenero int,
 	nome varchar(40) not null,
-	duracao timestamp,
+	duracao time,
 	PRIMARY KEY(idFilme)
 );
 create table genero(
