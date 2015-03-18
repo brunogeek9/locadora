@@ -9,7 +9,7 @@ create table cliente(
 	sexo char
 );
 create table emprestimo(
-	idEmprestimo int not null,
+	idEmprestimo int not null auto_increment,
 	data_devolucao date,
 	data_emprestimo date,
 	data_prevista date,
@@ -25,17 +25,18 @@ create table funcionario(
 	endereco varchar(40) not null
 );
 create table filme(
-	idFilme int not null PRIMARY KEY,
+	idFilme int not null auto_increment ,
 	idGenero int not null,
 	nome varchar(40) not null,
-	duracao timestamp
+	duracao timestamp,
+	PRIMARY KEY(idFilme)
 );
 create table genero(
-	idGenero int not null PRIMARY KEY,
-	nome varchar(40) not null
+	idGenero int not null auto_increment,
+	nome varchar(40) not null,
+	primary key(idGenero)
 );
 alter table filme add foreign key (idGenero) references genero (idGenero);
 alter table emprestimo add foreign key(idFilme) references filme(idFilme);
 alter table emprestimo add foreign key(cpf_cliente) references cliente(cpf_cliente);
 alter table emprestimo add foreign key(cpf_funcionario) references funcionario(cpf_funcionario);
-
