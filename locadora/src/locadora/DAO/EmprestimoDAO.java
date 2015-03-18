@@ -5,12 +5,10 @@
  */
 package locadora.DAO;
 
-import Conexao.ConectaDB;
-
 /**
  *
  * @author jamelle
  */
-public class FilmeDAO extends ConectaDB{
+public class EmprestimoDAO {
     
 }
