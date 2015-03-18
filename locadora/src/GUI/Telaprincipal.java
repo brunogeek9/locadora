@@ -66,6 +66,11 @@ public class Telaprincipal extends javax.swing.JFrame {
         gerenciar.setText("Gerenciar");
 
         jMenuItem1.setText("Emprestimo");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         gerenciar.add(jMenuItem1);
 
         jMenu1.setText("Filme");
@@ -139,6 +144,7 @@ public class Telaprincipal extends javax.swing.JFrame {
         jDesktopPane.add(a);
         a.setVisible(true);
         a.setBounds(50,50,200,200);
+        a.setTitle("Cadastro Filme");
     }//GEN-LAST:event_jMenuCadastroFilmeActionPerformed
 
     private void jMenuCadastroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastroUsuarioActionPerformed
@@ -146,6 +152,7 @@ public class Telaprincipal extends javax.swing.JFrame {
         jDesktopPane.add(a);
         a.setVisible(true);
         a.setBounds(50,50,200,200);
+        a.setTitle("Cadastro Cliente");
     }//GEN-LAST:event_jMenuCadastroUsuarioActionPerformed
 
     private void jMenuDevelopersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDevelopersActionPerformed
@@ -153,7 +160,16 @@ public class Telaprincipal extends javax.swing.JFrame {
         jDesktopPane.add(a);
         a.setVisible(true);
         a.setBounds(50,50,200,200);
+        a.setTitle("Sobre");
     }//GEN-LAST:event_jMenuDevelopersActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        Emprestimo a = new Emprestimo();
+        jDesktopPane.add(a);
+        a.setVisible(true);
+        a.setBounds(50,50,200,200);
+        a.setTitle("Gerenciar Emprestimo");
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
