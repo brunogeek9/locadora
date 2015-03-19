@@ -35,7 +35,28 @@ public class conexao {
     public void inserirFilme(Filme f){
         try {
             String q = "insert into filme(nome,duracao) values('" + f.getNome()+ "','" + f.getDuracao()+ "')";;
-            stmt.executeUpdate(q);            
+            stmt.executeUpdate(q);
+            //JOptionPane.showMessageDialog(this,"filme inserido com sucesso");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
+            Logger.getLogger(conexao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public void deletarFilme(Filme f){
+        try {
+            String q = "delete from filme where nome = '" + f.getNome() + "'";;
+            stmt.executeUpdate(q);
+            //JOptionPane.showMessageDialog(this,"filme inserido com sucesso");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
+            Logger.getLogger(conexao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    public void inserirCliente(Cliente cliente){
+        try {
+            String q = "insert into cliente(nome,cpf_cliente,endereco,telefone,data_nasc) values('" + cliente.getNome()+ "','" + cliente.getCPF()+ "','" + cliente.getEndereco()+ "','" + cliente.getTelefone()+ "','" + cliente.getData_nasc()+ "')";
+            stmt.executeUpdate(q);
+            //JOptionPane.showMessageDialog(this,"filme inserido com sucesso");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
             Logger.getLogger(conexao.class.getName()).log(Level.SEVERE, null, ex);

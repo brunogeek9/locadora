@@ -15,15 +15,15 @@ public class Cliente {
     private String endereco;
     private String telefone;
     private String data_nasc;
-    private char sexo;
+    //private char sexo;
     
-    public Cliente(String cpf,String nome,String endereco,String telefone,String data_nasc,char sexo ){
+    public Cliente(String cpf,String nome,String endereco,String telefone,String data_nasc ){
         this.cpf = cpf;
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;
         this.data_nasc = data_nasc;
-        this.sexo = sexo;
+        //this.sexo = sexo;
     }
     public Cliente(){
     
@@ -58,10 +58,10 @@ public class Cliente {
     public void setData_nasc(String Data_nasc){
         this.data_nasc = Data_nasc;
     }
-    public char getSexo(){
+    /*public char getSexo(){
         return sexo;
     }
     public void setSexo(char Sexo){
         this.sexo = Sexo;
-    }
+    }*/
 }

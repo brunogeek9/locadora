@@ -78,10 +78,6 @@ public class GerenciarFilme extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonDeletar)
-                .addGap(57, 57, 57))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(31, 31, 31)
@@ -112,6 +108,10 @@ public class GerenciarFilme extends javax.swing.JInternalFrame {
                             .addComponent(jTextField3)
                             .addComponent(jButtonBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(39, 39, 39))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButtonDeletar)
+                .addGap(63, 63, 63))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,9 +142,9 @@ public class GerenciarFilme extends javax.swing.JInternalFrame {
                         .addComponent(jButtonBuscar)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButtonDeletar)
-                .addContainerGap(208, Short.MAX_VALUE))
+                .addContainerGap(223, Short.MAX_VALUE))
         );
 
         pack();
@@ -155,11 +155,13 @@ public class GerenciarFilme extends javax.swing.JInternalFrame {
         conexao c = new conexao();
         c.inserirFilme(f);
         this.setVisible(false);
-        //JOptionPane.showMessageDialog(this,"filme inserido com sucesso");
+        
     }//GEN-LAST:event_jButtonCadastroFilmeActionPerformed
 
     private void jButtonDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeletarActionPerformed
-        // TODO add your handling code here:
+        Filme f = new Filme(jTextFieldNome.getText(),jTextFieldDuracao.getText());
+        conexao c = new conexao();
+        c.deletarFilme(null);
     }//GEN-LAST:event_jButtonDeletarActionPerformed
 
 

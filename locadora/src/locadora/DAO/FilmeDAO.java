@@ -39,7 +39,7 @@ public class FilmeDAO{
         
     }*/
     /*public static void deletarFilme(Filme f){
-        String q = "delete from filme where nome = '" + f.getNome() + "';";
+        String q = "delete from filme where nome = '" + f.getNome() + "'";
             try 
            { 
                Statement ps = con.createStatement(); //cria o statement
