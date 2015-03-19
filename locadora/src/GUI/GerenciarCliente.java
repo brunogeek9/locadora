@@ -42,7 +42,6 @@ public class GerenciarCliente extends javax.swing.JInternalFrame {
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jTextField2 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
         jTextFieldCPF = new javax.swing.JTextField();
         jTextFieldTel = new javax.swing.JTextField();
         jTextFieldDat = new javax.swing.JTextField();
@@ -77,6 +76,11 @@ public class GerenciarCliente extends javax.swing.JInternalFrame {
         jLabel9.setText("Nome :");
 
         jButton1.setText("Buscar Cliente");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTextField2.setEditable(false);
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -84,8 +88,6 @@ public class GerenciarCliente extends javax.swing.JInternalFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
-
-        jButton2.setText("Excluir Cliente");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,9 +128,7 @@ public class GerenciarCliente extends javax.swing.JInternalFrame {
                                 .addGap(47, 47, 47)
                                 .addComponent(jButtonCadastrarCliente)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(76, 76, 76)))
                 .addGap(52, 52, 52))
             .addGroup(layout.createSequentialGroup()
@@ -183,11 +183,8 @@ public class GerenciarCliente extends javax.swing.JInternalFrame {
                             .addComponent(jLabel1)
                             .addComponent(jTextFieldDat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jButtonCadastrarCliente)))
+                .addGap(13, 13, 13)
+                .addComponent(jButtonCadastrarCliente)
                 .addContainerGap(69, Short.MAX_VALUE))
         );
 
@@ -202,13 +199,19 @@ public class GerenciarCliente extends javax.swing.JInternalFrame {
         Cliente cliente = new Cliente(jTextFieldCPF.getText(),jTextFieldNome.getText(),jTextFieldEnd.getText(),jTextFieldTel.getText(),jTextFieldDat.getText());
         conexao c = new conexao();
         c.inserirCliente(cliente);
+        this.setVisible(false);
     }//GEN-LAST:event_jButtonCadastrarClienteActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        /*conexao conec = new conexao();
+        String n=jTextField1.getText();
+        Cliente cl =conec.buscarF(n);*/
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonCadastrarCliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

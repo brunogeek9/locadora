@@ -62,7 +62,25 @@ public class conexao {
             Logger.getLogger(conexao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
+    public Filme buscarFilme(String nome){
+        Filme f = new Filme();
+        try {
+            rs = stmt.executeQuery("select nome, idFilme from filme where nome="+nome);
+            String Nome = "Sem resultado";
+            //int matriculaBanco = 0;
+            while(rs.next()){
+                nome = rs.getString(1);
+                //matriculaBanco = rs.getInt("matricula");
+            }
+            f.setNome(nome);
+            //aluno.setMatricula(matriculaBanco);
+           
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.getMessage());
+            Logger.getLogger(conexao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return f;
+    }
     
     
 }
