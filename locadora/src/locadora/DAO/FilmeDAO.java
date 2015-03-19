@@ -22,21 +22,33 @@ import locadora.Modelos.conexao;
  */
 public class FilmeDAO{
     
-    public static Statement stmt;
+    /*public static Statement stmt;
     public static ResultSet rs;
-    public static String deletar, atualizar, inserir, selecionar;
-    public static void inserirFilme(Filme f){
+    public static String deletar, atualizar, inserir, selecionar;*/
+    /*public static void inserirFilme(Filme f){
+               
+                String q = "insert into filme(nome) values('" + f.getNome()+ "')";
+        try  //tenta executar um bloco de comandos
+        {
+            Statement ps = con.createStatement(); 
+            ps.executeUpdate(q);
+            ps.close(); //fecha o statement
+            con.close(); //fecha a conexão
+        } 
+        catch (SQLException ex) {  }
         
-            
-                Connection con = conexao.main();
-                String q = "insert into filme(nome,duracao) values('" + f.getNome()+ "','" + f.getDuracao()+ "')";
-                
-                JOptionPane.showMessageDialog(null, "Filme Cadastrado com Sucesso");
-            /*} catch (SQLException ex) {
-                Logger.getLogger(FilmeDAO.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
-        
-        
-    }
+    }*/
+    /*public static void deletarFilme(Filme f){
+        String q = "delete from filme where nome = '" + f.getNome() + "';";
+            try 
+           { 
+               Statement ps = con.createStatement(); //cria o statement
+               ps.executeUpdate(q); //executa o codigo sql
+               ps.close(); //fecha o statement
+               con.close(); //fecha a conexão
+           }
+           catch (SQLException ex) { Logger.getLogger(MedicoDAO.class.getName()).log(Level.SEVERE, null, ex); }
+       }
+    }*/
     
 }

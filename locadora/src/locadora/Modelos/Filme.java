@@ -16,9 +16,15 @@ public class Filme {
     public Filme(){
     
     }
+
+    /**
+     *
+     * @param Nome
+     */
     public Filme(String Nome,String Duracao){
-        this.duracao = Duracao;
+        //this.duracao = Duracao;
         this.nome = Nome;
+        this.duracao = Duracao;
     }
     public int getIdFilme(){
         return idFilme;
