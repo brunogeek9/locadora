@@ -34,7 +34,7 @@ public class Sobre extends javax.swing.JInternalFrame {
         setMaximizable(true);
         setResizable(true);
 
-        jLabel1.setText("Programa feito por Bruno Jamelle");
+        jLabel1.setText("Programa feito por Bruno Jamelle,Maria Rayane e Gyovani");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -43,7 +43,7 @@ public class Sobre extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(208, 208, 208)
                 .addComponent(jLabel1)
-                .addContainerGap(232, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

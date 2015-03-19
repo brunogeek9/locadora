@@ -16,9 +16,8 @@ public class Filme {
     public Filme(){
     
     }
-    public Filme(int idFilme,String Nome,String Duracao){
+    public Filme(String Nome,String Duracao){
         this.duracao = Duracao;
-        this.idFilme = idFilme;
         this.nome = Nome;
     }
     public int getIdFilme(){

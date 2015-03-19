@@ -37,10 +37,10 @@ public class Telaprincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         gerenciar = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
+        jMenuGerenciamentoFilme = new javax.swing.JMenu();
         jMenuCadastroFilme = new javax.swing.JMenuItem();
         Usurario = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
+        jMenuGerenciamentoUsuario = new javax.swing.JMenu();
         jMenuCadastroUsuario = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
@@ -73,7 +73,7 @@ public class Telaprincipal extends javax.swing.JFrame {
         });
         gerenciar.add(jMenuItem1);
 
-        jMenu1.setText("Filme");
+        jMenuGerenciamentoFilme.setText("Filme");
 
         jMenuCadastroFilme.setText("Cadastrar/Excluir");
         jMenuCadastroFilme.addActionListener(new java.awt.event.ActionListener() {
@@ -81,14 +81,14 @@ public class Telaprincipal extends javax.swing.JFrame {
                 jMenuCadastroFilmeActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuCadastroFilme);
+        jMenuGerenciamentoFilme.add(jMenuCadastroFilme);
 
         Usurario.setText("Listar");
-        jMenu1.add(Usurario);
+        jMenuGerenciamentoFilme.add(Usurario);
 
-        gerenciar.add(jMenu1);
+        gerenciar.add(jMenuGerenciamentoFilme);
 
-        jMenu3.setText("Usuario");
+        jMenuGerenciamentoUsuario.setText("Usuario");
 
         jMenuCadastroUsuario.setText("Cadastrar/Excluir");
         jMenuCadastroUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -96,12 +96,12 @@ public class Telaprincipal extends javax.swing.JFrame {
                 jMenuCadastroUsuarioActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuCadastroUsuario);
+        jMenuGerenciamentoUsuario.add(jMenuCadastroUsuario);
 
         jMenuItem4.setText("Listar");
-        jMenu3.add(jMenuItem4);
+        jMenuGerenciamentoUsuario.add(jMenuItem4);
 
-        gerenciar.add(jMenu3);
+        gerenciar.add(jMenuGerenciamentoUsuario);
 
         jMenuBar1.add(gerenciar);
 
@@ -215,14 +215,14 @@ public class Telaprincipal extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JDesktopPane jDesktopPane;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuCadastroFilme;
     private javax.swing.JMenuItem jMenuCadastroUsuario;
     private javax.swing.JMenuItem jMenuDevelopers;
+    private javax.swing.JMenu jMenuGerenciamentoFilme;
+    private javax.swing.JMenu jMenuGerenciamentoUsuario;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables

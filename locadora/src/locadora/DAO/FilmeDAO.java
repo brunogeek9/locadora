@@ -5,7 +5,8 @@
  */
 package locadora.DAO;
 
-import Conexao.ConectaDB;
+
+import java.sql.Connection;
 import locadora.Modelos.Filme;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,27 +15,28 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
+import locadora.Modelos.conexao;
 /**
  *
  * @author jamelle
  */
-public class FilmeDAO extends ConectaDB{
+public class FilmeDAO{
+    
     public static Statement stmt;
     public static ResultSet rs;
     public static String deletar, atualizar, inserir, selecionar;
     public static void inserirFilme(Filme f){
-        getConexaoDB();
-        if(conn != null){
-            //Variável contendo o código sql para inserção
-            inserir = "insert into filme(nome,duracao) values('" + f.getNome()+ "','" + f.getDuracao()+ "')";
-            try {
-                stmt = conn.createStatement();
-                stmt.executeUpdate(inserir);
-                JOptionPane.showMessageDialog(null, "Filme Cadastrado");
-            } catch (SQLException ex) {
+        
+            
+                Connection con = conexao.main();
+                String q = "insert into filme(nome,duracao) values('" + f.getNome()+ "','" + f.getDuracao()+ "')";
+                
+                JOptionPane.showMessageDialog(null, "Filme Cadastrado com Sucesso");
+            /*} catch (SQLException ex) {
                 Logger.getLogger(FilmeDAO.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+            }*/
+        
+        
     }
     
 }
